@@ -5,63 +5,101 @@ namespace Card
 {
     public class CardMover : MonoBehaviour
     {
-        private List<Card> _cards = new List<Card>();
-        private int _cardsCount;
+        private readonly List<Card> _cards = new List<Card>();
         
-        private PRS _leftPRS = null;
-        private PRS _rightPRS = null;
-        private PRS _topPRS = null;
+        private PRS _leftPRS;
+        private PRS _rightPRS;
+        private PRS _topPRS;
         
         [SerializeField] private GameObject _leftCard;
         [SerializeField] private GameObject _rightCard;
         [SerializeField] private GameObject _topCard;
 
+        private void Awake()
+        {
+            GetCardsPRS();
+        }
+
         private void GetCardsPRS()
         {
-            _leftPRS.position = _leftCard.transform.position;
-            _leftPRS.rotation = _leftCard.transform.eulerAngles;
-            _leftPRS.scale = _leftCard.transform.localScale;
-            
-            _rightPRS.position = _rightCard.transform.position;
-            _rightPRS.rotation = _rightCard.transform.eulerAngles;
-            _rightPRS.scale = _rightCard.transform.localScale;
-            
-            _topPRS.position = _topCard.transform.position;
-            _topPRS.rotation = _topCard.transform.eulerAngles;
-            _topPRS.scale = _topCard.transform.localScale;
+            _leftPRS = CreatePRS(_leftCard, nameof(_leftCard));
+            _rightPRS = CreatePRS(_rightCard, nameof(_rightCard));
+            _topPRS = CreatePRS(_topCard, nameof(_topCard));
+        }
+
+        private static PRS CreatePRS(GameObject cardSlot, string slotName)
+        {
+            if (cardSlot == null)
+            {
+                Debug.LogError($"{nameof(CardMover)} requires {slotName} to be assigned.");
+                return null;
+            }
+
+            var slotTransform = cardSlot.transform;
+            return new PRS
+            {
+                position = slotTransform.position,
+                rotation = slotTransform.eulerAngles,
+                scale = slotTransform.localScale
+            };
         }
 
         public void AddCard(Card obj)
         {
+            if (obj == null || _cards.Contains(obj))
+            {
+                return;
+            }
+
             _cards.Add(obj);
-            _cardsCount = _cards.Count;
+            DrawCards();
         }
 
         public void RemoveCard(Card obj)
         {
-            _cards.Remove(obj);
-            _cardsCount = _cards.Count;
+            if (_cards.Remove(obj))
+            {
+                DrawCards();
+            }
         }
 
         private void DrawCards()
         {
-            if (_cardsCount == 1)
+            if (_leftPRS == null || _rightPRS == null || _topPRS == null)
             {
-                _cards[0].MoveCard(_topPRS);
+                return;
             }
-            else if (_cardsCount == 2)
+
+            switch (_cards.Count)
             {
-                _cards[0].MoveCard(_leftPRS);
-                _cards[1].MoveCard(_rightPRS);
+                case 0:
+                    return;
+                case 1:
+                    _cards[0].MoveCard(_topPRS);
+                    return;
+                case 2:
+                    _cards[0].MoveCard(_leftPRS);
+                    _cards[1].MoveCard(_rightPRS);
+                    return;
+                default:
+                    for (var i = 0; i < _cards.Count; i++)
+                    {
+                        var ratio = (float)i / (_cards.Count - 1);
+                        _cards[i].MoveCard(InterpolatePRS(_leftPRS, _rightPRS, ratio));
+                    }
+
+                    return;
             }
-            else
+        }
+
+        private static PRS InterpolatePRS(PRS from, PRS to, float ratio)
+        {
+            return new PRS
             {
-                _cards[0].MoveCard(_leftPRS);
-                for (var i = 1; i < _cardsCount - 1; i++)
-                {
-                    
-                }
-            }
+                position = Vector3.Lerp(from.position, to.position, ratio),
+                rotation = Vector3.Lerp(from.rotation, to.rotation, ratio),
+                scale = Vector3.Lerp(from.scale, to.scale, ratio)
+            };
         }
     }
 }
