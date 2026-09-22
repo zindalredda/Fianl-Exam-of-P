@@ -1,24 +1,46 @@
 using Card.Enum;
+using Core;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Card
 {
     public class Card : MonoBehaviour
     {
-        private PRS _prs;
-        public MainCardType cardType;
-        public MajorType majorType;
-        public Sprite cardSprite;
+        [ReadOnly] [SerializeField] private PRS prs;
+        [ReadOnly] [SerializeField] private MainCardType cardType;
+        [ReadOnly] [SerializeField] private System.Enum subCardType;
+        [ReadOnly] [SerializeField] private Sprite cardSprite;
 
-        public void SetMajorType(MajorType type)
+        [SerializeField] private float duration;
+        
+        private Tween sequence;
+
+        public void SetCardType(MainCardType mainType, System.Enum subType)
         {
-            cardType = MainCardType.Major;
-            majorType = type;
+            cardType = mainType;
+            subCardType = subType;
+
+            ChangeSprite();
         }
 
-        public void MoveCard(PRS prs)
+        private void ChangeSprite()
         {
-            _prs = prs;
+            cardSprite = cardType.GetCardSprite(subCardType);
+            this.GetComponent<SpriteRenderer>().sprite = cardSprite;
+        }
+
+        public void MoveCard(PRS target, int index = 0)
+        {
+            prs = target;
+            this.GetComponent<SpriteRenderer>().sortingOrder = index;
+            sequence?.Kill();
+
+            sequence = DOTween.Sequence()
+                .Append(transform.DOMove(prs.position, duration).SetEase(Ease.Linear))
+                .Join(transform.DOScale(new Vector3(1, 1, 1), duration).SetEase(Ease.Linear))
+                .Join(transform.DORotate(prs.rotation, duration).SetEase(Ease.Linear));
+
         }
     }
 }
