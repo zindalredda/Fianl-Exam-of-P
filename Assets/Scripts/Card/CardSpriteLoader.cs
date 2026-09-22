@@ -1,42 +1,27 @@
-﻿using Card.Enum;
+﻿using System;
+using Card.Enum;
 using UnityEngine;
 
 namespace Card
 {
-    public class CardSpriteLoader : MonoBehaviour
+    public static class CardSpriteLoader
     {
-        private static readonly System.Collections.Generic.Dictionary<MainCardType, Sprite[]> SpriteCache = new();
-
-        public Sprite GetCardSprite(MainCardType mainCardType, System.Enum subCardType)
+        public static Sprite GetCardSprite(this MainCardType value, System.Enum subCardType)
         {
-            var (resourcePath, enumType) = mainCardType switch
+            var fullSprite = Resources.LoadAll<Sprite>("Card/"+value.ToString()+"_Cards");
+            var subType = value switch
             {
-                MainCardType.Major => ("Card/Major_Cards", typeof(MajorType)),
-                MainCardType.Liberal => ("Card/Liberal_Cards", typeof(LiberalType)),
-                MainCardType.Play => ("Card/Play_Cards", typeof(PlayType)),
-                MainCardType.Work => ("Card/Work_Cards", typeof(WorkType)),
-                _ => throw new System.ArgumentOutOfRangeException(nameof(mainCardType), mainCardType, null)
+                MainCardType.Major => typeof(MajorType),
+                MainCardType.Liberal => typeof(LiberalType),
+                MainCardType.Play => typeof(PlayType),
+                MainCardType.Work => typeof(WorkType),
+                _ => throw new Exception("Unknown card type")
             };
+            
+            if (subCardType.GetType()!=subType)
+                throw new Exception("SubCard type is not supported");
 
-            if (subCardType == null || subCardType.GetType() != enumType)
-                throw new System.ArgumentException($"{mainCardType}에는 {enumType.Name} 값을 사용해야 합니다.", nameof(subCardType));
-
-            if (!SpriteCache.TryGetValue(mainCardType, out var sprites))
-            {
-                // Multiple로 분할된 PNG의 모든 타일(Sprite)을 읽습니다.
-                sprites = Resources.LoadAll<Sprite>(resourcePath);
-                SpriteCache.Add(mainCardType, sprites);
-            }
-
-            var spriteIndex = System.Convert.ToInt32(subCardType);
-            var spriteName = $"{resourcePath[(resourcePath.LastIndexOf('/') + 1)..]}_{spriteIndex}";
-            var sprite = System.Array.Find(sprites, item => item.name == spriteName);
-
-            if (sprite == null)
-                throw new System.ArgumentOutOfRangeException(nameof(subCardType), subCardType,
-                    $"'{resourcePath}'에서 '{spriteName}' 스프라이트를 찾을 수 없습니다.");
-
-            return sprite;
+            return fullSprite[Convert.ToInt32(subCardType)];
         }
     }
 }
