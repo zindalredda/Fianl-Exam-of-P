@@ -1,4 +1,4 @@
-using Card.Enum;
+using Card.Enums;
 using Core;
 using DG.Tweening;
 using UnityEngine;
@@ -9,12 +9,19 @@ namespace Card
     {
         public PRS prs { get; private set; }
         [ReadOnly] [SerializeField] private MainCardType cardType;
-        [ReadOnly] [SerializeField] private System.Enum subCardType;
+        private System.Enum subCardType;
         [ReadOnly] [SerializeField] private Sprite cardSprite;
 
         [SerializeField] private float duration;
         
         private Tween sequence;
+
+        private void Start()
+        {
+            prs.pos = transform.position;
+            prs.rot = transform.eulerAngles;
+            prs.scale = transform.localScale;
+        }
 
         public void SetCardType(MainCardType mainType, System.Enum subType)
         {

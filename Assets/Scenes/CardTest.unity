@@ -187,7 +187,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1377947075, guid: 71fd1b45f260441ae86a6035b68bdbd2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
   cardType: 0
   cardSprite: {fileID: 0}
-  duration: 0
+  duration: 1
 --- !u!1 &884776938
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +236,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884776939}
+  - component: {fileID: 884776941}
+  - component: {fileID: 884776940}
   m_Layer: 0
   m_Name: CardSpace
   m_TagString: Untagged
@@ -262,6 +264,41 @@ Transform:
   - {fileID: 1831980358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884776940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884776938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95c7104b6ea5432db18794ad1ee2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Card.CardMover
+  _leftCard: {fileID: 289699066}
+  _rightCard: {fileID: 1841406720}
+  _topCard: {fileID: 7619798508819512566}
+  _startCard: {fileID: 1831980360}
+--- !u!114 &884776941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884776938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abd714d18dd4215b0eae0982f70b483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Card.CardGenerator
+  _baseCard: {fileID: 2635958498891159093, guid: acb14654732b7fa4081aecee094b5034, type: 3}
+  cardMover: {fileID: 0}
+  _mainCardType: 0
+  _majorType: 0
+  _liberType: 0
+  _playType: 0
+  _workType: 0
 --- !u!1 &1074506161
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +519,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1377947075, guid: 71fd1b45f260441ae86a6035b68bdbd2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -506,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
   cardType: 0
   cardSprite: {fileID: 0}
-  duration: 0
+  duration: 1
 --- !u!1 &1841406717
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +627,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1377947075, guid: 71fd1b45f260441ae86a6035b68bdbd2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -614,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
   cardType: 0
   cardSprite: {fileID: 0}
-  duration: 0
+  duration: 1
 --- !u!1 &1398313672343145535
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +720,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1377947075, guid: 71fd1b45f260441ae86a6035b68bdbd2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -722,7 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
   cardType: 0
   cardSprite: {fileID: 0}
-  duration: 0
+  duration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

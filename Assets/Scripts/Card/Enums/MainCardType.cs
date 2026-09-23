@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Card.Enum
+namespace Card.Enums
 {
     public enum MainCardType
     {
@@ -8,5 +8,6 @@ namespace Card.Enum
         [Description("Liberal")] Liberal,
         [Description("Play")] Play,
         [Description("Work")] Work
+        
     }
 }

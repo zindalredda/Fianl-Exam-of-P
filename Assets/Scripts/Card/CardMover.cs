@@ -11,18 +11,21 @@ namespace Card
         [ReadOnly] [SerializeField] private PRS _leftPRS;
         [ReadOnly] [SerializeField] private PRS _rightPRS;
         [ReadOnly] [SerializeField] private PRS _topPRS;
+        [ReadOnly] [SerializeField] private PRS _startPRS;
         
         [SerializeField] private Card _leftCard;
         [SerializeField] private Card _rightCard;
         [SerializeField] private Card _topCard;
+        [SerializeField] private Card _startCard;
 
-        private void Awake()
+        private void Start()
         {
             GetCardPRS();
         }
         
         private void GetCardPRS()
         {
+            _startPRS = _startCard.prs;
             _leftPRS = _leftCard.prs;
             _rightPRS = _rightCard.prs;
             _topPRS = _topCard.prs;
@@ -31,6 +34,7 @@ namespace Card
         public void AddCard(Card card)
         {
             _cards.Add(card);
+            DrawCard();
         }
 
         public void RemoveCard(Card card)

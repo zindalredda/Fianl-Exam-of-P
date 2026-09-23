@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Card.Enum
+namespace Card.Enums
 {
     public enum PlayType
     {

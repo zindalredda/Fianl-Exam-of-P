@@ -1,5 +1,5 @@
 ﻿using System;
-using Card.Enum;
+using Card.Enums;
 using UnityEngine;
 
 namespace Card
