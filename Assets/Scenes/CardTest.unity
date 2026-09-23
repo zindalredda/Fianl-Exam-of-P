@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 289699063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
-  m_LocalPosition: {x: -4, y: -1.5, z: 0}
+  m_LocalPosition: {x: -4, y: -2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -224,6 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537d9fe63e54467c802c720708e33f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
+  prs:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
   cardType: 0
   cardSprite: {fileID: 0}
   duration: 1
@@ -254,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 884776938}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -276,6 +280,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b95c7104b6ea5432db18794ad1ee2cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card.CardMover
+  _cards: []
+  _leftPRS:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+  _rightPRS:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+  _topPRS:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+  _startPRS:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
   _leftCard: {fileID: 289699066}
   _rightCard: {fileID: 1841406720}
   _topCard: {fileID: 7619798508819512566}
@@ -299,6 +320,10 @@ MonoBehaviour:
   _liberType: 0
   _playType: 0
   _workType: 0
+  _startPRS:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
 --- !u!1 &1074506161
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +488,7 @@ Transform:
   m_GameObject: {fileID: 1831980357}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: -4, z: 0}
+  m_LocalPosition: {x: 3, y: -4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -541,6 +566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537d9fe63e54467c802c720708e33f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
+  prs:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
   cardType: 0
   cardSprite: {fileID: 0}
   duration: 1
@@ -571,7 +600,7 @@ Transform:
   m_GameObject: {fileID: 1841406717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.3420201, w: 0.9396927}
-  m_LocalPosition: {x: 4, y: -1.5, z: 0}
+  m_LocalPosition: {x: 4, y: -2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -649,6 +678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537d9fe63e54467c802c720708e33f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
+  prs:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
   cardType: 0
   cardSprite: {fileID: 0}
   duration: 1
@@ -757,6 +790,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537d9fe63e54467c802c720708e33f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card.Card
+  prs:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
   cardType: 0
   cardSprite: {fileID: 0}
   duration: 1

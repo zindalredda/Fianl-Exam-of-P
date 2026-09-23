@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Card
 {
+    [System.Serializable]
     public class PRS
     {
         public Vector3 pos;

@@ -6,12 +6,12 @@ namespace Card
 {
     public class CardMover : MonoBehaviour
     {
-        [ReadOnly] [SerializeField] private readonly List<Card> _cards = new List<Card>();
+        [ReadOnly] [SerializeField] private List<Card> _cards = new List<Card>();
         
         [ReadOnly] [SerializeField] private PRS _leftPRS;
         [ReadOnly] [SerializeField] private PRS _rightPRS;
         [ReadOnly] [SerializeField] private PRS _topPRS;
-        [ReadOnly] [SerializeField] private PRS _startPRS;
+        public PRS _startPRS;
         
         [SerializeField] private Card _leftCard;
         [SerializeField] private Card _rightCard;
@@ -33,6 +33,7 @@ namespace Card
 
         public void AddCard(Card card)
         {
+            GetCardPRS();
             _cards.Add(card);
             DrawCard();
         }
@@ -54,13 +55,7 @@ namespace Card
 
         private PRS CalculateCardPRS(int index)
         {
-            return _cards.Count switch
-            {
-                1 => _topPRS,
-                2 => index == 1 ? _leftPRS : _rightPRS,
-                3 => Cal(index),
-                _ => throw new System.NotImplementedException()
-            };
+            return _cards.Count == 1 ? _topPRS : Cal(index);
         }
 
         private PRS Cal(int index)
@@ -71,9 +66,12 @@ namespace Card
             var topRight = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
             var position = Vector3.Lerp(leftTop, topRight, t);
 
-            var leftRotation = Vector3.Lerp(_leftPRS.pos, _topPRS.pos, t);
-            var rightRotation = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
-            var rotation = Vector3.Lerp(leftRotation, rightRotation, t);
+            // Interpolate directly between the left and right rotations so the
+            // cards turn evenly along the fan, including across 0/360 degrees.
+            var rotation = new Vector3(
+                Mathf.LerpAngle(_leftPRS.rot.x, _rightPRS.rot.x, t),
+                Mathf.LerpAngle(_leftPRS.rot.y, _rightPRS.rot.y, t),
+                Mathf.LerpAngle(_leftPRS.rot.z, _rightPRS.rot.z, t));
 
             var prs = new PRS(position, rotation, _topPRS.scale);
             prs.LogPRS(index.ToString());
