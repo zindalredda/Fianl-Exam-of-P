@@ -1,105 +1,84 @@
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 
 namespace Card
 {
     public class CardMover : MonoBehaviour
     {
-        private readonly List<Card> _cards = new List<Card>();
+        [ReadOnly] [SerializeField] private readonly List<Card> _cards = new List<Card>();
         
-        private PRS _leftPRS;
-        private PRS _rightPRS;
-        private PRS _topPRS;
+        [ReadOnly] [SerializeField] private PRS _leftPRS;
+        [ReadOnly] [SerializeField] private PRS _rightPRS;
+        [ReadOnly] [SerializeField] private PRS _topPRS;
         
-        [SerializeField] private GameObject _leftCard;
-        [SerializeField] private GameObject _rightCard;
-        [SerializeField] private GameObject _topCard;
+        [SerializeField] private Card _leftCard;
+        [SerializeField] private Card _rightCard;
+        [SerializeField] private Card _topCard;
 
         private void Awake()
         {
-            GetCardsPRS();
+            GetCardPRS();
+        }
+        
+        private void GetCardPRS()
+        {
+            _leftPRS = _leftCard.prs;
+            _rightPRS = _rightCard.prs;
+            _topPRS = _topCard.prs;
         }
 
-        private void GetCardsPRS()
+        public void AddCard(Card card)
         {
-            _leftPRS = CreatePRS(_leftCard, nameof(_leftCard));
-            _rightPRS = CreatePRS(_rightCard, nameof(_rightCard));
-            _topPRS = CreatePRS(_topCard, nameof(_topCard));
+            _cards.Add(card);
         }
 
-        private static PRS CreatePRS(GameObject cardSlot, string slotName)
+        public void RemoveCard(Card card)
         {
-            if (cardSlot == null)
-            {
-                Debug.LogError($"{nameof(CardMover)} requires {slotName} to be assigned.");
-                return null;
-            }
+            _cards.Remove(card);
+        }
 
-            var slotTransform = cardSlot.transform;
-            return new PRS
+        private void DrawCard()
+        {
+            if (_cards.Count == 0)
+                Debug.Log("DrawCard() : No Cards. Wrong Call"); // ForDebug
+            else
+                for (var i = 0; i < _cards.Count; i++)
+                    _cards[i].MoveCard(CalculateCardPRS(i), i);
+
+        }
+
+        private PRS CalculateCardPRS(int index)
+        {
+            return _cards.Count switch
             {
-                position = slotTransform.position,
-                rotation = slotTransform.eulerAngles,
-                scale = slotTransform.localScale
+                1 => _topPRS,
+                2 => index == 1 ? _leftPRS : _rightPRS,
+                3 => Cal(index)
             };
         }
 
-        public void AddCard(Card obj)
+        private PRS Cal(int index)
         {
-            if (obj == null || _cards.Contains(obj))
-            {
-                return;
-            }
+            int count = _cards.Count;
 
-            _cards.Add(obj);
-            DrawCards();
-        }
+            if (count == 1)
+                return _topPRS;
 
-        public void RemoveCard(Card obj)
-        {
-            if (_cards.Remove(obj))
-            {
-                DrawCards();
-            }
-        }
+            var t = (float)index / (count - 1);
 
-        private void DrawCards()
-        {
-            if (_leftPRS == null || _rightPRS == null || _topPRS == null)
-            {
-                return;
-            }
+            var leftTop = Vector3.Lerp(_leftPRS.pos, _topPRS.pos, t);
+            var topRight = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
+            var position = Vector3.Lerp(leftTop, topRight, t);
 
-            switch (_cards.Count)
-            {
-                case 0:
-                    return;
-                case 1:
-                    _cards[0].MoveCard(_topPRS);
-                    return;
-                case 2:
-                    _cards[0].MoveCard(_leftPRS);
-                    _cards[1].MoveCard(_rightPRS);
-                    return;
-                default:
-                    for (var i = 0; i < _cards.Count; i++)
-                    {
-                        var ratio = (float)i / (_cards.Count - 1);
-                        _cards[i].MoveCard(InterpolatePRS(_leftPRS, _rightPRS, ratio));
-                    }
+            var leftRotation = Vector3.Lerp(_leftPRS.pos, _topPRS.pos, t);
+            var rightRotation = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
+            var rotation = Vector3.Lerp(leftRotation, rightRotation, t);
 
-                    return;
-            }
-        }
-
-        private static PRS InterpolatePRS(PRS from, PRS to, float ratio)
-        {
-            return new PRS
-            {
-                position = Vector3.Lerp(from.position, to.position, ratio),
-                rotation = Vector3.Lerp(from.rotation, to.rotation, ratio),
-                scale = Vector3.Lerp(from.scale, to.scale, ratio)
-            };
+            var prs = new PRS(position, rotation, _topPRS.scale);
+            prs.LogPRS(index.ToString());
+            
+            return prs;
         }
     }
 }

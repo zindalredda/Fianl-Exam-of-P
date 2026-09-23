@@ -117,133 +117,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Play_Improved_0
+      name: Play_Cards_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 708
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14ac7c67712834020800000000000000
-      internalID: 2324844869941971521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Play_Improved_1
-      rect:
-        serializedVersion: 2
-        x: 379
+        x: 18
         y: 709
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa4359caf013a60d0800000000000000
-      internalID: -3428874222899481430
+      spriteID: cf00626dd4090454ebedd3868c837cbe
+      internalID: 1449710943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Play_Improved_2
+      name: Play_Cards_1
       rect:
         serializedVersion: 2
-        x: 744
+        x: 380
+        y: 710
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e49531da71c37848b05ad3c13005e0d
+      internalID: 469015616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play_Cards_2
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 706
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05383df94ef687f4c8dfaec4b9f70d44
+      internalID: -1068144301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play_Cards_3
+      rect:
+        serializedVersion: 2
+        x: 1110
         y: 705
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a6b196c23e5983140800000000000000
-      internalID: 4699671014096313194
+      spriteID: a6fd24c14a82c2f489fd1a7744c1fa90
+      internalID: -625151526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Play_Improved_3
+      name: Play_Cards_4
       rect:
         serializedVersion: 2
-        x: 1109
-        y: 704
-        width: 357
-        height: 468
+        x: 16
+        y: 220
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2ba0b566bdb4e7bb0800000000000000
-      internalID: -4936424735864321358
+      spriteID: 229bf53fa0978e041ae1e36e5b4b7ece
+      internalID: 1334912808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Play_Improved_4
+      name: Play_Cards_5
       rect:
         serializedVersion: 2
-        x: 15
+        x: 387
         y: 219
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ff99bfec908735230800000000000000
-      internalID: 3626374108486015487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Play_Improved_5
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 218
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43d9cf352c499c6c0800000000000000
-      internalID: -4122600421527347916
+      spriteID: e8e6d3b1eb6e31946919833c85ba683b
+      internalID: 873264446
       vertices: []
       indices: 
       edges: []
@@ -252,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 548a73e3cef609041aa18654454621bf
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +260,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Play_Improved_0: 2324844869941971521
-      Play_Improved_1: -3428874222899481430
-      Play_Improved_2: 4699671014096313194
-      Play_Improved_3: -4936424735864321358
-      Play_Improved_4: 3626374108486015487
-      Play_Improved_5: -4122600421527347916
+      Play_Cards_0: 1449710943
+      Play_Cards_1: 469015616
+      Play_Cards_2: -1068144301
+      Play_Cards_3: -625151526
+      Play_Cards_4: 1334912808
+      Play_Cards_5: 873264446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

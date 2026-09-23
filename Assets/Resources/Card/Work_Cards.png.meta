@@ -111,89 +111,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Work_Improved_0
+      name: Work_Cards_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 702
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fde09f60afd65b70800000000000000
-      internalID: 8887536794821783028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Work_Improved_1
-      rect:
-        serializedVersion: 2
-        x: 411
+        x: 36
         y: 703
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 47fcab9b666eb2670800000000000000
-      internalID: 8515152849351135092
+      spriteID: 92ebc71141416ed4f923b3024d97b0fa
+      internalID: -362621762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Work_Improved_2
+      name: Work_Cards_1
       rect:
         serializedVersion: 2
-        x: 776
-        y: 701
-        width: 357
-        height: 468
+        x: 412
+        y: 704
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f188a83a2164cc230800000000000000
-      internalID: 3660377643012491295
+      spriteID: e9ebae0bf1e243f43936181ff2bab53c
+      internalID: 98304625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Work_Improved_3
+      name: Work_Cards_2
       rect:
         serializedVersion: 2
-        x: 1147
+        x: 777
         y: 702
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dcefe902f9669a760800000000000000
-      internalID: 7469614290603802317
+      spriteID: d03b2bfa1349efa42a58e787e1b789eb
+      internalID: 1620663500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Work_Cards_3
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 703
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d07b7643ed7fa47bdd19cb6ca58a9f
+      internalID: -1510012398
       vertices: []
       indices: 
       edges: []
@@ -202,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0df97832b36df264a8e3504b21d8f3d8
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Work_Improved_0: 8887536794821783028
-      Work_Improved_1: 8515152849351135092
-      Work_Improved_2: 3660377643012491295
-      Work_Improved_3: 7469614290603802317
+      Work_Cards_0: -362621762
+      Work_Cards_1: 98304625
+      Work_Cards_2: 1620663500
+      Work_Cards_3: -1510012398
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

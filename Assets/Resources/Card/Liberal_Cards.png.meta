@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Liberal_Improved_0
+      name: Liberal_Cards_0
       rect:
         serializedVersion: 2
         x: 22
@@ -124,16 +124,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa2a428bf7066e360800000000000000
-      internalID: 7198547156064838314
+      spriteID: fa5514c23ebd695498748dfd63ae7c1a
+      internalID: 1377947075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Liberal_Improved_1
+      name: Liberal_Cards_1
       rect:
         serializedVersion: 2
         x: 399
@@ -146,19 +146,19 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 94cc5160f91f57410800000000000000
-      internalID: 1474350118337891401
+      spriteID: 8a9ac2265974a2b47a0a0ba1b5177b20
+      internalID: -940914019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Liberal_Improved_2
+      name: Liberal_Cards_2
       rect:
         serializedVersion: 2
-        x: 775
+        x: 772
         y: 712
         width: 355
         height: 466
@@ -168,16 +168,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 20db435c25cc725e0800000000000000
-      internalID: -1934352859064386302
+      spriteID: 16af7f2a20a8cc44cbfa1da3f9ce495b
+      internalID: 391472908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Liberal_Improved_3
+      name: Liberal_Cards_3
       rect:
         serializedVersion: 2
         x: 1149
@@ -190,10 +190,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 601249126e0decd30800000000000000
-      internalID: 4453726768340410630
+      spriteID: 4fc89384511d4dc4c9aeb51d08c32b14
+      internalID: 1169335597
       vertices: []
       indices: 
       edges: []
@@ -214,10 +214,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Liberal_Improved_0: 7198547156064838314
-      Liberal_Improved_1: 1474350118337891401
-      Liberal_Improved_2: -1934352859064386302
-      Liberal_Improved_3: 4453726768340410630
+      Liberal_Cards_0: 1377947075
+      Liberal_Cards_1: -940914019
+      Liberal_Cards_2: 391472908
+      Liberal_Cards_3: 1169335597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

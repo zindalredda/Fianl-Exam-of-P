@@ -123,177 +123,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Major_Improved2_0
+      name: Major_Cards_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 711
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4504d49811590670800000000000000
-      internalID: 8505418537283880267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Major_Improved2_1
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 710
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a94ab4ef135f7be0800000000000000
-      internalID: -1477370756307727966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Major_Improved2_2
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 722
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ffaaef28bf5eede10800000000000000
-      internalID: 2224468134364883711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Major_Improved2_3
-      rect:
-        serializedVersion: 2
-        x: 1134
+        x: 43
         y: 712
-        width: 357
-        height: 468
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4bff185dbe6a8ea0800000000000000
-      internalID: -5869757404817654966
+      spriteID: 7dcbe880890a2f94dabfc06d12a59243
+      internalID: -911003373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Major_Improved2_4
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 244
-        width: 357
-        height: 468
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99bd0ab222536e440800000000000000
-      internalID: 4964714060099672985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Major_Improved2_5
+      name: Major_Cards_1
       rect:
         serializedVersion: 2
         x: 408
-        y: 246
-        width: 357
-        height: 468
+        y: 711
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6962f9f0d97158a0800000000000000
-      internalID: -6318134863770523285
+      spriteID: 40995f0e5c9b22640870c22bb232a35a
+      internalID: -815819342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Major_Improved2_6
+      name: Major_Cards_2
       rect:
         serializedVersion: 2
-        x: 780
-        y: 248
-        width: 357
-        height: 468
+        x: 777
+        y: 723
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0290648b77f57340800000000000000
-      internalID: 4861063482690277901
+      spriteID: f667eb4d9f04be34ca9ba8d244945359
+      internalID: -45185310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Major_Improved2_7
+      name: Major_Cards_3
       rect:
         serializedVersion: 2
-        x: 1140
-        y: 248
-        width: 357
-        height: 468
+        x: 1135
+        y: 713
+        width: 355
+        height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e99b79b6afa96de90800000000000000
-      internalID: -7001238170363250274
+      spriteID: 3d002108a37e2bb4498ddc7cc6ae54f9
+      internalID: -1684354187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Major_Cards_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 245
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1547eb25a59ec294f8936b1f54be9bb9
+      internalID: -1158386879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Major_Cards_5
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 247
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa81e72b61846e8408e1ffbfef1166e9
+      internalID: -975266902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Major_Cards_6
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 249
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6855c9740acba47ba5eeb9c2151923
+      internalID: -1422800879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Major_Cards_7
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 249
+        width: 355
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeedb1b8b7baa7429228d0b0024fc8b
+      internalID: -1457053847
       vertices: []
       indices: 
       edges: []
@@ -302,7 +302,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fd949efa07a35934081853b69c9eaa33
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +310,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Major_Improved2_0: 8505418537283880267
-      Major_Improved2_1: -1477370756307727966
-      Major_Improved2_2: 2224468134364883711
-      Major_Improved2_3: -5869757404817654966
-      Major_Improved2_4: 4964714060099672985
-      Major_Improved2_5: -6318134863770523285
-      Major_Improved2_6: 4861063482690277901
-      Major_Improved2_7: -7001238170363250274
+      Major_Cards_0: -911003373
+      Major_Cards_1: -815819342
+      Major_Cards_2: -45185310
+      Major_Cards_3: -1684354187
+      Major_Cards_4: -1158386879
+      Major_Cards_5: -975266902
+      Major_Cards_6: -1422800879
+      Major_Cards_7: -1457053847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

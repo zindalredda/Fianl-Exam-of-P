@@ -7,7 +7,7 @@ namespace Card
 {
     public class Card : MonoBehaviour
     {
-        [ReadOnly] [SerializeField] private PRS prs;
+        public PRS prs { get; private set; }
         [ReadOnly] [SerializeField] private MainCardType cardType;
         [ReadOnly] [SerializeField] private System.Enum subCardType;
         [ReadOnly] [SerializeField] private Sprite cardSprite;
@@ -37,9 +37,9 @@ namespace Card
             sequence?.Kill();
 
             sequence = DOTween.Sequence()
-                .Append(transform.DOMove(prs.position, duration).SetEase(Ease.Linear))
+                .Append(transform.DOMove(prs.pos, duration).SetEase(Ease.Linear))
                 .Join(transform.DOScale(new Vector3(1, 1, 1), duration).SetEase(Ease.Linear))
-                .Join(transform.DORotate(prs.rotation, duration).SetEase(Ease.Linear));
+                .Join(transform.DORotate(prs.rot, duration).SetEase(Ease.Linear));
 
         }
     }
