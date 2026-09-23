@@ -54,18 +54,14 @@ namespace Card
             {
                 1 => _topPRS,
                 2 => index == 1 ? _leftPRS : _rightPRS,
-                3 => Cal(index)
+                3 => Cal(index),
+                _ => throw new System.NotImplementedException()
             };
         }
 
         private PRS Cal(int index)
         {
-            int count = _cards.Count;
-
-            if (count == 1)
-                return _topPRS;
-
-            var t = (float)index / (count - 1);
+            var t = (float)index / (_cards.Count - 1);
 
             var leftTop = Vector3.Lerp(_leftPRS.pos, _topPRS.pos, t);
             var topRight = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
