@@ -15,6 +15,13 @@ namespace Card
             this.scale = scale;
         }
 
+        public PRS()
+        {
+            this.pos = new Vector3();
+            this.rot = new Vector3();
+            this.scale = new Vector3();
+        }
+
         public void LogPRS(string str = "")
         {
             Debug.Log(str + "|" + "Pos: " + pos + " Rot: " + rot + " Scale: " + scale);

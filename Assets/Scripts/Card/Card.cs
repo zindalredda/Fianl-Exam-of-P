@@ -15,9 +15,11 @@ namespace Card
         [SerializeField] private float duration;
         
         private Tween sequence;
-
+        
         private void Start()
         {
+            prs = new PRS();
+            
             prs.pos = transform.position;
             prs.rot = transform.eulerAngles;
             prs.scale = transform.localScale;

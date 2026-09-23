@@ -35,6 +35,8 @@ namespace Card
                 _ => throw new ArgumentOutOfRangeException()
             };
             
+            Debug.Log(_subType); // FORDEBUG
+            
             var temp =  Instantiate(_baseCard);
             temp.GetComponent<Card>().SetCardType(_mainCardType, _subType);
             var newCard = temp.GetComponent<Card>();
