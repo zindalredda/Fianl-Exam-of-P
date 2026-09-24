@@ -65,9 +65,7 @@ namespace Card
             var leftTop = Vector3.Lerp(_leftPRS.pos, _topPRS.pos, t);
             var topRight = Vector3.Lerp(_topPRS.pos, _rightPRS.pos, t);
             var position = Vector3.Lerp(leftTop, topRight, t);
-
-            // Interpolate directly between the left and right rotations so the
-            // cards turn evenly along the fan, including across 0/360 degrees.
+            
             var rotation = new Vector3(
                 Mathf.LerpAngle(_leftPRS.rot.x, _rightPRS.rot.x, t),
                 Mathf.LerpAngle(_leftPRS.rot.y, _rightPRS.rot.y, t),
