@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Card
+namespace Core
 {
     [System.Serializable]
     public class PRS

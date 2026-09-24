@@ -8,7 +8,7 @@ namespace Card
     {
         public static Sprite GetCardSprite(this MainCardType value, System.Enum subCardType)
         {
-            var fullSprite = Resources.LoadAll<Sprite>("Card/"+value.ToString()+"_Cards");
+            var fullSprite = Resources.LoadAll<Sprite>("Day/"+value.ToString()+"_Cards");
             var subType = value switch
             {
                 MainCardType.Major => typeof(MajorType),
