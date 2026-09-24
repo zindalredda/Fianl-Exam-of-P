@@ -11,7 +11,6 @@ namespace Card
         [ReadOnly] [SerializeField] private MainCardType cardType;
         private System.Enum subCardType;
         [ReadOnly] [SerializeField] private Sprite cardSprite;
-
         [SerializeField] private float duration;
         
         private Tween sequence;

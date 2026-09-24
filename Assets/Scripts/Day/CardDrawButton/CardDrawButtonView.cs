@@ -31,29 +31,34 @@ namespace Day.CardDrawButton
             _originScale = this.transform.localScale;
         }
         
-        public void ChangeButtonAnimation(ButtonEventType eventType)
+        public void ChangeButtonAnimation(ButtonEventType eventType, bool isDelay)
         {
             switch (eventType)
             {
                 case ButtonEventType.Enter:
                     transform.localScale = _originScale.returnHoverVector3();
                     outlineRenderer.color = _white;
-                    return;
+                    break;
                 case ButtonEventType.Exit:
                     transform.localScale = _originScale;
                     outlineRenderer.color = _clear;
-                    return;
+                    break;
                 case ButtonEventType.Down:
+                    if (isDelay)
+                    {
+                        Debug.Log("Delaying");
+                        return;
+                    }
                     transform.localScale = _originScale.returnPressedVector3();
                     _renderer.color = _grey;
-                    return;
+                    break;
                 case ButtonEventType.Up:
                     transform.localScale = _originScale;
                     _renderer.color = _white;
-                    return;
+                    break;
                 default:
-                    Debug.LogError("Unknown ButtonEventType");
-                    return;
+                    Debug.LogError($"Unknown ButtonEventType: {eventType}");
+                    break;
             }
         }
 
