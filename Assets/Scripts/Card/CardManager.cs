@@ -30,6 +30,8 @@ namespace Card
                     _playCards.Add(value.ToString());
                 else if (value.ToString().Contains("Work"))
                     _workCards.Add(value.ToString());
+                else
+                    Debug.LogError("Wrong SubTypes");
             }
         }
 
