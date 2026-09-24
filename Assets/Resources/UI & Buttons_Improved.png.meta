@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f98de60ff330b46c3932be1b26091148
+guid: 6c826c5e5159d5c4abe051986d845633
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -455,7 +455,7 @@ TextureImporter:
       name: UI & Buttons_Improved_14
       rect:
         serializedVersion: 2
-        x: 955
+        x: 987
         y: 30
         width: 289
         height: 252
