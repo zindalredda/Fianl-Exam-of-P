@@ -17,15 +17,18 @@ namespace Day.DataDisplay.TimeDisplay
             if (changeType == DataChangeType.Time)
             {
                 _timeView.ShowTimeHand(integerData);
-                _timeTextView.ShowText(timeTextReturner.ReturnText(integerData, isFirstTime));
-                isFirstTime = false;
             }
             else if (changeType == DataChangeType.TimeOut)
             {
                 _timeView.ShowTimeHand(24);
                 _timeTextView.ForceStop();
-                isFirstTime = false;
             }
+        }
+
+        public void ShowTimeText(int time)
+        {
+            _timeTextView.ShowText(timeTextReturner.ReturnText(time, isFirstTime));
+            isFirstTime = false;
         }
     }
 }

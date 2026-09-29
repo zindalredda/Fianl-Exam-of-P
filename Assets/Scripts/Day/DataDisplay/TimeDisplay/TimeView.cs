@@ -6,8 +6,9 @@ using UnityEngine;
 
 namespace Day.DataDisplay.TimeDisplay
 {
-    public class TimeView : MonoBehaviour, IDataAccessible
+    public class TimeView : MonoBehaviour
     {
+        [Header("For Debug")]
         [ReadOnly][SerializeField] private GameObject _timeHand;
         [ReadOnly][SerializeField] private GameObject _minuteHand;
 
@@ -21,23 +22,12 @@ namespace Day.DataDisplay.TimeDisplay
             _minuteHand = transform.GetChild(1).gameObject;
         }
 
-        public void OnDataChange(DataChangeType changeType, bool booleanData, int integerData)
-        {
-            switch (changeType)
-            {
-                case DataChangeType.Time:
-                    _currentTime = integerData;
-                    ShowTimeHand(_currentTime);
-                    break;
-                case DataChangeType.TimeOut:
-                    _currentTime = 24;
-                    ShowTimeHand(_currentTime);
-                    break;
-            }
-        }
-
         public void ShowTimeHand(int _time)
         {
+            if (_currentTime == _time)
+                return;
+            _currentTime = _time;
+
             if (seq == null)
                 seq = DOTween.Sequence();
 
