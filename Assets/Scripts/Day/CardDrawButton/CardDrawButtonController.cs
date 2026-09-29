@@ -30,6 +30,10 @@ namespace Day.CardDrawButton
             StartCoroutine(Delay(0.8f));
         }
 
+        public void DrawCard()
+        {
+
+        }
         private IEnumerator Delay(float delay)
         {
             if (_isDelaying)

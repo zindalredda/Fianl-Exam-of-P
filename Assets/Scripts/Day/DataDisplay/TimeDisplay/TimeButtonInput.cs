@@ -7,12 +7,12 @@ namespace Day.DataDisplay.TimeDisplay
     {
         [Header("For Debug")]
         [ReadOnly][SerializeField] private BoxCollider2D _boxCollider2D;
-        [ReadOnly][SerializeField] private TimeController _timeController;
+        [ReadOnly][SerializeField] private TimeDisplayController _timeController;
 
         private void Awake()
         {
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            _timeController = GetComponent<TimeController>();
+            _timeController = GetComponent<TimeDisplayController>();
         }
 
         private void OnMouseDown()

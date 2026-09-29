@@ -8,6 +8,11 @@ namespace Card
 {
     public class CardController : MonoBehaviour
     {
+        [Header("For Debug")]
+        [ReadOnly][SerializeField] private CardMover _cardMover;
+        [ReadOnly][SerializeField] private CardGenerator _cardGenerator;
+
+
         [ReadOnly][SerializeField] private List<string> _majorCards = new List<string>();
         [ReadOnly][SerializeField] private List<string> _liberalCards = new List<string>();
         [ReadOnly][SerializeField] private List<string> _playCards = new List<string>();

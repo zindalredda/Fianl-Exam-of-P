@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Day.DataDisplay.TimeDisplay
 {
-    public class TimeController : MonoBehaviour, IDataAccessible
+    public class TimeDisplayController : MonoBehaviour, IDataAccessible
     {
         [SerializeField] private TimeView _timeView;
         [SerializeField] private TimeTextView _timeTextView;

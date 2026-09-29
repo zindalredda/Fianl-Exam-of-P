@@ -9,7 +9,7 @@ namespace Day
     public class DayManager : MonoBehaviour
     {
         [SerializeField] private CardDrawButtonController cardDrawButtonController;
-        [SerializeField] private TimeController timeController;
+        [SerializeField] private TimeDisplayController timeController;
 
     }
 }
