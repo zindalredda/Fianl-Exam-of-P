@@ -6,18 +6,18 @@ using UnityEngine;
 
 namespace Card
 {
-    public class CardManager : MonoBehaviour
+    public class CardController : MonoBehaviour
     {
-        [ReadOnly] [SerializeField] private List<string> _majorCards  = new List<string>();
-        [ReadOnly] [SerializeField] private List<string> _liberalCards = new List<string>();
-        [ReadOnly] [SerializeField] private List<string> _playCards = new List<string>();
-        [ReadOnly] [SerializeField] private List<string> _workCards = new List<string>();
-        
-        [ReadOnly] [SerializeField] private List<string> _usedCards = new List<string>();
-        
-        [ReadOnly] [SerializeField] private List<string> _preSelectedCards = new List<string>();
-        [ReadOnly] [SerializeField] private List<string> _randomizedCards = new List<string>();
-        
+        [ReadOnly][SerializeField] private List<string> _majorCards = new List<string>();
+        [ReadOnly][SerializeField] private List<string> _liberalCards = new List<string>();
+        [ReadOnly][SerializeField] private List<string> _playCards = new List<string>();
+        [ReadOnly][SerializeField] private List<string> _workCards = new List<string>();
+
+        [ReadOnly][SerializeField] private List<string> _usedCards = new List<string>();
+
+        [ReadOnly][SerializeField] private List<string> _preSelectedCards = new List<string>();
+        [ReadOnly][SerializeField] private List<string> _randomizedCards = new List<string>();
+
         private void Reset()
         {
             foreach (var value in Enum.GetValues(typeof(InnerCardType)))
@@ -46,8 +46,8 @@ namespace Card
             else if (str.Contains("Work"))
                 _workCards.Remove(str);
             else
-                Debug.LogError("Cannnot find " + str +". Remove Fail");
-            
+                Debug.LogError("Cannnot find " + str + ". Remove Fail");
+
             _usedCards.Add(str);
         }
     }

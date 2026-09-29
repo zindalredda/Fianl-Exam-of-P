@@ -11,19 +11,19 @@ namespace Day.CardDrawButton
     {
         [Header("Components")]
         [SerializeField] private CardDrawButtonInput _input;
-        [SerializeField] private CardDrawButtonView  _view;
-        
+        [SerializeField] private CardDrawButtonView _view;
+
         [Header("Debugs")]
-        [ReadOnly] [SerializeField] private BoxCollider2D _boxCollider2D;
-        [ReadOnly] [SerializeField] private bool _isDelaying = false;
+        [ReadOnly][SerializeField] private BoxCollider2D _boxCollider2D;
+        [ReadOnly][SerializeField] private bool _isDelaying = false;
 
         private void Awake()
         {
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            if(_boxCollider2D == null)
+            if (_boxCollider2D == null)
                 Debug.LogError("No BoxCollider2D found");
         }
-        
+
         public void RenderButton(ButtonEventType eventType)
         {
             _view.ChangeButtonAnimation(eventType, _isDelaying);
@@ -41,7 +41,7 @@ namespace Day.CardDrawButton
                 _isDelaying = false;
             }
         }
-        
+
         public void OnDataChange(DataChangeType changeType, bool booleanData, int integerData)
         {
             switch (changeType)
