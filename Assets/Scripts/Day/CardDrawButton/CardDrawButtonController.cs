@@ -32,8 +32,12 @@ namespace Day.CardDrawButton
 
         public void DrawCard()
         {
-
+            if (_isDelaying)
+                return;
+            
+            
         }
+        
         private IEnumerator Delay(float delay)
         {
             if (_isDelaying)

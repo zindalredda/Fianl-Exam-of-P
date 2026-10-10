@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using Card.Enums;
 using Core;
+using Data.Enums;
+using Data.Interface;
 using UnityEngine;
 
 namespace Card
 {
-    public class CardController : MonoBehaviour
+    public class CardController : MonoBehaviour, IListAccessible
     {
         [Header("For Debug")]
         [ReadOnly][SerializeField] private CardMover _cardMover;
@@ -54,6 +56,11 @@ namespace Card
                 Debug.LogError("Cannnot find " + str + ". Remove Fail");
 
             _usedCards.Add(str);
+        }
+
+        public void OnDataChange(ListType type, List<string> list)
+        {
+            
         }
     }
 }
